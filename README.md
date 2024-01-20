@@ -1,4 +1,4 @@
-<h1>Page overlay / rotation reveal</h1>
+<h1>Page Overlay / Rotation Reveal</h1>
 
 Click the hamburger menu icon to cause the page content to rotate, revealing the nav links.
 

@@ -1,14 +1,13 @@
 <h1>Page overlay / rotation reveal</h1>
 
-One of my first projects!
+Click the hamburger menu icon to cause the page content to rotate, revealing the nav links.
 
-Click the hamburger menu to cause the page content to rotate, revealing the nav menu.
+![Screenshot 2024-01-19 at 4 19 10 PM](https://github.com/mattwheeler-dev/rotate/assets/105622101/d62fb976-a4b2-404f-8263-fc1d3b4e313b)
 
-<img width="500" alt="Screenshot 2023-12-19 at 8 18 54 PM" src="https://github.com/m-wheeler-dev/rotate/assets/105622101/8c352a24-2f52-493b-8768-ffc3f63b9054">
 
-<img width="500" alt="Screenshot 2023-12-19 at 8 18 18 PM" src="https://github.com/m-wheeler-dev/rotate/assets/105622101/e64e88a3-2a86-49c9-a4cf-98a6c8efaa9b">
+![Screenshot 2024-01-19 at 4 19 15 PM](https://github.com/mattwheeler-dev/rotate/assets/105622101/6ae1eb48-68a1-4014-bc9e-31a197d79f7a)
 
-<p>This was accomplished by building the nav menu with a full-page container, and then doing the same with the page content and placing the content "on top" of the nav container. </p>
+
 
 <p>When the menu button is clicked, the primary content container rotates and reveals the nav menu.</p>
 

@@ -1,64 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Rotate Page</title>
-</head>
-<body>
-   <div class="container">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- FAVICON -->
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+		<!-- LINK STYLESHEET -->
+		<link rel="stylesheet" href="styles.css" />
+		<!-- LINK & DEFER JS -->
+		<script src="scripts.js" defer></script>
+		<!-- LINK & DEFER FONT AWESOME -->
+		<script
+			src="https://kit.fontawesome.com/1e723eb9a7.js"
+			crossorigin="anonymous"
+			defer
+		></script>
+		<title>RotatePage</title>
+	</head>
+	<body>
+		<main>
+			<div id="nav-btns">
+				<i id="nav-open" class="fa-solid fa-bars-staggered"></i>
+				<i id="nav-close" class="fa-solid fa-xmark"></i>
+			</div>
 
-       <div class="circle-container">
+			<nav>
+				<img src="images/logo2.png" alt="MW logo" />
+				<p>BOO! <i class="fa-solid fa-ghost"></i></p>
+				<a href="https://mattwheeler-dev.com" target="_blank">
+					Portfolio
+					<i class="fa-solid fa-up-right-from-square"></i>
+				</a>
+				<a href="https://www.linkedin.com/in/mattwheeler-dev/" target="_blank">
+					LinkedIn
+					<i class="fa-brands fa-linkedin"></i>
+				</a>
+				<a href="https://github.com/mattwheeler-dev" target="_blank">
+					GitHub
+					<i class="fa-brands fa-github"></i>
+				</a>
+			</nav>
 
-           <div class="circle">
-
-               <button id="close">
-                   <i class="fas fa-times"></i>
-                </button>
-               <button id="open">
-                   <i class="fas fa-bars"></i>
-                </button>
-
-           </div>
-
-       </div>
-
-       <div class="content">
-           <h1>Nav Button Rotates Page</h1>
-           <h2>Below you will see a few pictures of the dogs in the family.</h2>
-
-           <div id="picsContainer">
-
-            <div class="dogPic"><img src="images/Cooper3.png" alt="dog"><h3>Cooper!</h3></div>
-
-            <div class="dogPic"><img src="images/Sansa2.png" alt="dog"><h3>Sansa!</h3></div>
-
-            <div class="dogPic"><img src="images/Arya1.png" alt="dog"><h3>Arya!</h3></div>
-
-            <div class="dogPic"><img src="images/Charlie1.png" alt="dog"><h3>Charlie!</h3></div>
-
-            <div class="dogPic"><img src="images/Dakota1.png" alt="dog"><h3>Dakota!</h3></div>
-
-            <div class="dogPic"><img src="images/StarkDogs2.png" alt="dog"><h3>The Stark Sisters! (Again)</h3></div>
-            
-           </div>
-
-       </div>
-
-   </div>
-
-   <nav>
-       <ul>
-           <li><i class="fas fa-home"></i>Home</li>
-           <li><i class="fas fa-user-alt"></i>About</li>
-           <li><i class="fas fa-envelope"></i>Contact</li>
-           <li>Sorry, but these links are only here to demonstrate the page's functionality.</li>
-       </ul>
-   </nav>
-    
-    <script src="https://kit.fontawesome.com/1e723eb9a7.js" crossorigin="anonymous"></script>
-    <script src="app.js"></script>
-</body>
+			<section>
+				<h1>Nav Rotation Reveal</h1>
+				<p>
+					Use the nav buttons to find the nav links, and then use those links to
+					find me!
+				</p>
+				<div id="skills">
+					<h2>Some Skills of Mine</h2>
+					<div>
+						<img src="images/reactjs.png" alt="" />
+						<img src="images/github.png" alt="" />
+						<img src="images/nodejs.png" alt="" />
+					</div>
+					<div>
+						<img src="images/html.png" alt="" />
+						<img src="images/css.png" alt="" />
+						<img src="images/javascript.png" alt="" />
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
 </html>

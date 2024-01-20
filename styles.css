@@ -1,172 +1,136 @@
-@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@400;700&display=swap');
+/* GOOGLE FONT IMPORT [ POPPINS: 300, 400 ] */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
 
+/* GLOBAL DEFAULTS */
 * {
-    font-family: 'Dongle', Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	font-family: "Poppins", Arial, Helvetica, sans-serif;
+	letter-spacing: 1px;
 }
 
 body {
-    background-color: steelblue;
-    color: black;
-    overflow-x: hidden;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+	height: 100vh;
+	width: 100vw;
+	color: #fff;
+	background-color: #151515;
+	overflow: hidden;
 }
 
-.container {
-    background-color: blanchedalmond;
-    transform-origin: top left;
-    transition: transform 1s linear;
-    width: 100vw;
-    min-height: 100vh;
-    padding: 5%;
+main {
+	height: 100%;
+	width: 100%;
+	background-color: #484848;
+	transform-origin: top left;
+	transition: transform 0.5s linear;
 }
 
-.container.show-nav {
-    transform: rotate(-20deg);
+/* OPEN / CLOSE BTNS */
+#nav-btns {
+	cursor: pointer;
+	height: 8rem;
+	width: 8rem;
+	background-color: #5b3c6e;
+	border-radius: 50%;
+	border: 1px solid #ffffff40;
+	position: fixed;
+	top: -4rem;
+	left: -4rem;
+	transition: transform 0.5s linear;
 }
 
-.container.show-nav .circle {
-    transform: rotate(-70deg);
+#nav-open,
+#nav-close {
+	height: 4rem;
+	width: 4rem;
+	font-size: 1.5rem;
+	display: grid;
+	place-items: center;
+	position: absolute;
+	bottom: 0.25rem;
 }
 
-.circle-container {
-    position: fixed;
-    top: -100px;
-    left: -100px;
+#nav-open {
+	right: 0.25rem;
 }
 
-.circle {
-    background-color: gray;
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    position: relative;
-    transition: transform 1s linear;
+#nav-close {
+	left: 0.25rem;
 }
 
-.circle button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: fit-content;
-    background-color: transparent;
-    border: none;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-}
-
-.circle button#open {
-    left: 60%;
-    top: 60%;
-}
-
-.circle button#close {
-    left: 40%;
-    top: 60%;
-    transform: rotate(90deg);
-    transform-origin: top left;
-}
-
-.container.show-nav + nav li {
-    transform: translateX(0);
-    transition-delay: 0.5s;
-}
-
+/* NAV */
 nav {
-    position: fixed;
-    bottom: 5%;
-    left: 0;
-    z-index: 100;
+	height: 10rem;
+	width: 10rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: absolute;
+	bottom: 10rem;
+	left: -10rem;
 }
 
-nav ul {
-    list-style-type: none;
-    padding-left: 2rem;
+nav img {
+	height: 4rem;
+	width: 4rem;
 }
 
-nav ul li {
-    text-transform: uppercase;
-    color: white;
-    margin: 3rem 0;
-    transform: translateX(-100%);
-    transition: transform 0.5s ease-in;
-    cursor: pointer;
+nav a {
+	margin: 1rem auto;
+	color: #fff;
+	text-decoration: none;
+	transition: all 0.3s linear;
 }
 
-nav ul li i {
-    font-size: 2rem;
-    margin-right: 1rem;
+/* CONTENT SECTION */
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-nav ul li + li {
-    margin-left: 2rem;
-    transform: translateX(-150%);
+h1 {
+	margin: 3rem auto;
+	font-size: 2rem;
 }
 
-nav ul li + li + li {
-    margin-left: 4rem;
-    transform: translateX(-200%);
+h2 {
+	width: 100%;
+	text-align: center;
 }
 
-nav ul li + li + li + li {
-    width: 10rem;
-    margin-left: 1rem;
-    transform: translateX(-200%);
+/* SKILLS SECTION */
+#skills {
+	width: 80%;
+	margin-top: 3rem;
+	padding: 2rem 1rem;
+	background-color: #5b3c6e;
+	border: 1px solid #ffffff40;
+	border-radius: 1rem;
+	box-shadow: 0 0 1rem #000;
 }
 
-.content {
-    height: fit-content;
-    width: 90%;
-    margin: auto;
-    text-align: center;
+#skills div {
+	height: 12rem;
+	width: 100%;
+	margin-top: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
 }
 
-.content h1 {
-    font-size: 3rem;
-    margin: 0;
+#skills img {
+	height: 100%;
+	width: auto;
 }
 
-.content h2 {
-    font-size: 2rem;
-    margin: 0 auto;
-    margin-bottom: 2%;
+/* ADD SHOW-NAV CLASS / ROTATION REVEAL */
+main.show-nav {
+	transform: rotateZ(-15deg);
 }
 
-.content h3 {
-    font-size: 1.5rem;
-    margin: 0;
-}
-
-#picsContainer {
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.dogPic {
-    margin: 1rem;
-    height: 30%;
-    width: 30%;
-    border-radius: 25px;
-    box-shadow: 0 0 1rem black;
-    overflow: hidden;
-}
-
-.dogPic:hover {
-    transform: scale(1.2);
-    box-shadow: 0 0 1rem 0.6rem steelblue;
-    transition: 2s;
-}
-
-.dogPic img {
-    height: 100%;
-    width: 100%;
+main.show-nav #nav-btns {
+	transform: rotateZ(-70deg);
 }

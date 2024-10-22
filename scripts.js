@@ -1,11 +1,6 @@
-const open = document.querySelector("#nav-open");
-const close = document.querySelector("#nav-close");
+const navBtn = document.querySelector("#nav-btns");
 const main = document.querySelector("main");
 
-open.addEventListener("click", () => {
-	main.classList.add("show-nav");
-});
-
-close.addEventListener("click", () => {
-	main.classList.remove("show-nav");
+navBtn.addEventListener("click", () => {
+	main.classList.toggle("show-nav");
 });
